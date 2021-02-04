@@ -1,14 +1,15 @@
 # Documentation
 
 * [Dynamics Model](#dynamicsmodel)
-    * Ensemble-MLP
-    * RNN
+   * [`class PredictEnv`](#predictenv)
+         * [`class PredictEnvRNN`](#predictenvrnn)
+   * [`class Model`](#model)
+         * Ensemble-MLP
+         * RNN
     
 ## Dynamics Model
 Inheritance Relationship:
-* [`class PredictEnv`](#predictenv)
-    * [`class PredictEnvRNN`](#predictenvrnn)
-* [`class Model`](#model)
+
     
 ### PredictEnv
 Highest level of abstraction of the model that acts like a gym environment and accounts for all interaction with the agent and the runner
