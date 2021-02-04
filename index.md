@@ -1,17 +1,17 @@
 # Documentation
 
 * [Dynamics Model](#dynamicsmodel)
-   * [`class PredictEnv`](#predictenv)
-         * [`class PredictEnvRNN`](#predictenvrnn)
-   * [`class Model`](#model)
-         * Ensemble-MLP
-         * RNN
-    
-## Dynamics Model
-Inheritance Relationship:
+   * [PredictEnv](#predictenv)
+       * [PredictEnvRNN](#predictenvrnn)
+   * [Model](#model)
+       * Ensemble-MLP
+       * RNN
 
-    
+---
+## Dynamics Model
+
 ### PredictEnv
+`class PredictEnv`:
 Highest level of abstraction of the model that acts like a gym environment and accounts for all interaction with the agent and the runner
 
 Attributes: `model, env_name`
@@ -21,6 +21,7 @@ Attributes: `model, env_name`
 `def train(self, data, batch_size, steps, logger)->loss`
        
 ### PredictEnvRNN
+`class PredictEnvRNN`:
 Inherits PredictEnv, with small change in dimension to cast RNN
 Attributes: `model, env_name`
 
@@ -28,6 +29,8 @@ Attributes: `model, env_name`
 where states, actions are of shape (seq_len, batch, \*) or (seq_len, \*)
 
 `def train(self, replay_buffer, batch_size, steps, logger)->loss`
+
+<hr style="border:0.5px solid gray"> </hr>
 
 ### Model
 Interface for a low-level nn.Module dynamics model
